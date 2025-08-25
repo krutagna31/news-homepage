@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Josefin_Sans } from "next/font/google";
 import { ThemeProvider } from "@/context/theme-provider";
+import localFont from "next/font/local";
+import { Header } from "@/components/sections";
 import "./globals.css";
-import { Header } from "@/components/header";
 
-const josefinSans = Josefin_Sans({
-  subsets: ["latin"],
+const inter = localFont({
+  src: "../public/fonts/Inter-VariableFont_slnt,wght.ttf",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${josefinSans.className} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
