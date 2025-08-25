@@ -9,16 +9,16 @@ function Hero() {
           <picture>
             <source
               media="(min-width:768px)"
-              srcSet="/images/image-web-3-desktop.jpg"
+              srcSet="/images/hero/image-web-3-desktop.jpg"
             />
             <img
-              src="/images/image-web-3-mobile.jpg"
+              src="/images/hero/image-web-3-mobile.jpg"
               alt="a picture showing few shapes"
             />
           </picture>
         </div>
         <div className="grid md:grid-cols-2">
-          <h1 className="text-4xl md:text-5xl font-extrabold">
+          <h1 className="text-4xl font-extrabold md:text-5xl">
             The Bright Future of Web 3.0?
           </h1>
           <div className="space-y-2">
@@ -27,7 +27,7 @@ function Hero() {
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
-            <Button className="" size="lg">
+            <Button className="rounded-none tracking-widest" size="lg">
               READ MORE
             </Button>
           </div>

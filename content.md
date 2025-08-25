@@ -20,7 +20,7 @@ We dive into the next evolution of the web that claims to put the power of the p
 ---
 
 ## Sidebar - New
-### Hydrogen VS Electric Cars
+### HydrogenVS Electric Cars
 Will hydrogen-fueled cars ever catch up to EVs?
 
 ### The Downsides of AI Artistry

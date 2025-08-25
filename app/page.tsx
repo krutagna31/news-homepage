@@ -1,9 +1,10 @@
-import { Hero } from "@/components/sections/hero";
+import { Hero, Sidebar } from "@/components/sections";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <Sidebar />
     </>
   );
 }
