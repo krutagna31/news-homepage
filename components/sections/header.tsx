@@ -12,7 +12,7 @@ import Link from "next/link";
 // } from "@/components/ui";
 import { Menu, Moon, Sun } from "lucide-react";
 import Image from "next/image";
-import { links } from "@/content";
+import { headerLinks } from "@/content";
 import {
   Button,
   NavigationMenu,
@@ -34,46 +34,45 @@ function Header() {
     <header className="py-6">
       <ViewContainer className="flex items-center justify-between">
         <Link href="#">
-          <Image src="/images/logo.svg" alt="w" width="32" height="24" />
+          <Image src="/images/header/logo.svg" alt="w" width="32" height="24" />
         </Link>
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
-            {links.map((link) => (
-              <NavigationMenuItem key={link.title}>
+            {headerLinks.map((headerLink) => (
+              <NavigationMenuItem key={headerLink.title}>
                 <NavigationMenuLink asChild>
-                  <Link href={link.href}>{link.title}</Link>
+                  <Link href={headerLink.href}>{headerLink.title}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-          <Sheet>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu />
-              </Button>
-            </SheetTrigger>
-            <SheetContent>
-              <SheetHeader>
-                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-                <SheetDescription className="sr-only">
-                  Browse and select a link to explore different pages of the
-                  site
-                </SheetDescription>
-              </SheetHeader>
-              <NavigationMenu>
-                <NavigationMenuList className="flex-col items-start">
-                  {links.map((link) => (
-                    <NavigationMenuItem key={link.title}>
-                      <NavigationMenuLink asChild>
-                        <Link href={link.href}>{link.title}</Link>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </SheetContent>
-          </Sheet>
+        <Sheet>
+          <SheetTrigger asChild className="md:hidden">
+            <Button variant="ghost" size="icon">
+              <Menu />
+            </Button>
+          </SheetTrigger>
+          <SheetContent>
+            <SheetHeader>
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetDescription className="sr-only">
+                Browse and select a link to explore different pages of the site
+              </SheetDescription>
+            </SheetHeader>
+            <NavigationMenu>
+              <NavigationMenuList className="flex-col items-start">
+                {headerLinks.map((headerLink) => (
+                  <NavigationMenuItem key={headerLink.title}>
+                    <NavigationMenuLink asChild>
+                      <Link href={headerLink.href}>{headerLink.title}</Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+          </SheetContent>
+        </Sheet>
       </ViewContainer>
     </header>
   );
