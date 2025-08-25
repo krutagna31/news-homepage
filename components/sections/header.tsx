@@ -34,9 +34,9 @@ function Header() {
     <header className="py-6">
       <ViewContainer className="flex items-center justify-between">
         <Link href="#">
-          <Image src="/images/logo.svg" alt="w" width="65" height="40" />
+          <Image src="/images/logo.svg" alt="w" width="32" height="24" />
         </Link>
-        <NavigationMenu>
+        <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             {links.map((link) => (
               <NavigationMenuItem key={link.title}>
@@ -47,19 +47,33 @@ function Header() {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon">
-              <Menu />
-            </Button>
-          </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Navigation Bar</SheetTitle>
-              <SheetDescription>Navigation Bar Description</SheetDescription>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <SheetDescription className="sr-only">
+                  Browse and select a link to explore different pages of the
+                  site
+                </SheetDescription>
+              </SheetHeader>
+              <NavigationMenu>
+                <NavigationMenuList className="flex-col items-start">
+                  {links.map((link) => (
+                    <NavigationMenuItem key={link.title}>
+                      <NavigationMenuLink asChild>
+                        <Link href={link.href}>{link.title}</Link>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  ))}
+                </NavigationMenuList>
+              </NavigationMenu>
+            </SheetContent>
+          </Sheet>
       </ViewContainer>
     </header>
   );
