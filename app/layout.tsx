@@ -9,8 +9,8 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
-  description: "A Next.js template with shadcn/ui and tailwind css installed",
+  title: "News Homepage",
+  description: "This is the solution to news homepage challenge on frontend mentor",
 };
 
 export default function RootLayout({
