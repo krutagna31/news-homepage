@@ -14,7 +14,7 @@ export const articles: Article[] = [
   },
   {
     image: {
-      src: "/public/images/articles/image-top-laptops.jpg",
+      src: "/images/articles/image-top-laptops.jpg",
       alt: "laptop keyboard with red backlight",
     },
     link: {
@@ -25,7 +25,7 @@ export const articles: Article[] = [
   },
   {
     image: {
-      src: "/public/images/articles/image-gaming-growth.jpg",
+      src: "/images/articles/image-gaming-growth.jpg",
       alt: "a hand throwing controller in the air",
     },
     link: {
