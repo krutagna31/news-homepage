@@ -1,22 +1,37 @@
+import { Article } from "@/types";
 
-import { Link } from "@/types";
-
-export const articleLinks: Link[] = [
+export const articles: Article[] = [
   {
-    title: "Hydrogen VS Electric Cars",
-    description: "Will hydrogen-fueled cars ever catch up to EVs?",
-    href: "/",
+    image: {
+      src: "/images/articles/image-retro-pcs.jpg",
+      alt: "retro pc",
+    },
+    link: {
+      title: "Reviving Retro PCs",
+      description: "What happens when old PCs are given modern upgrades?",
+      href: "/",
+    },
   },
   {
-    title: "The Downsides of AI Artistry",
-    description:
-      "What are the possible adverse effects of on-demand AI image generation?",
-    href: "/",
+    image: {
+      src: "/public/images/articles/image-top-laptops.jpg",
+      alt: "laptop keyboard with red backlight",
+    },
+    link: {
+      title: "Top 10 Laptops of 2022",
+      description: "Our best picks for various needs and budgets.",
+      href: "/",
+    },
   },
   {
-    title: "Is VC Funding Drying Up?",
-    description:
-      "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
-    href: "/",
+    image: {
+      src: "/public/images/articles/image-gaming-growth.jpg",
+      alt: "a hand throwing controller in the air",
+    },
+    link: {
+      title: "The Growth of Gaming",
+      description: "How the pandemic has sparked fresh opportunities.",
+      href: "/",
+    },
   },
 ];
