@@ -1,13 +1,14 @@
 import { SectionContainer, ViewContainer } from "@/components/layouts";
-import { Button } from "@/components/ui";
+import { Button, Separator } from "@/components/ui";
 import { heroLinks } from "@/content";
 import Link from "next/link";
+import { Fragment } from "react";
 
 function Hero() {
   return (
     <SectionContainer>
-      <ViewContainer>
-        <div className="space-y-6">
+      <ViewContainer className="grid lg:grid-cols-[70fr_30fr] gap-6">
+        <div className="space-y-4">
           <div>
             <picture>
               <source
@@ -20,7 +21,7 @@ function Hero() {
               />
             </picture>
           </div>
-          <div className="grid md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <h1 className="text-4xl font-extrabold md:text-5xl">
               The Bright Future of Web 3.0?
             </h1>
@@ -36,16 +37,19 @@ function Hero() {
             </div>
           </div>
         </div>
-        <aside className="space-y-4 bg-blue-950">
-          <h1 className="text-3xl font-extrabold text-amber-400">New</h1>
-          <ul className="space-y-4">
-            {heroLinks.map(({ title, description, href }) => (
-              <li key={title}>
-                <Link href={href} className="text-xl font-bold text-white">
-                  {title}
-                </Link>
-                <p className="text-gray-400">{description}</p>
-              </li>
+        <aside className="space-y-4 bg-slate-900 p-4">
+          <h2 className="text-4xl font-extrabold text-amber-400">New</h2>
+          <ul className="space-y-6">
+            {heroLinks.map(({ title, description, href }, index) => (
+              <Fragment key={title}>
+                <li>
+                  <Link href={href} className="text-xl font-bold text-white">
+                    {title}
+                  </Link>
+                  <p className="text-gray-400">{description}</p>
+                </li>
+                {index < heroLinks.length - 1 && <Separator className="bg-gray-600" />}
+              </Fragment>
             ))}
           </ul>
         </aside>
