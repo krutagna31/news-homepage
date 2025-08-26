@@ -7,7 +7,7 @@ import { Fragment } from "react";
 function Hero() {
   return (
     <SectionContainer>
-      <ViewContainer className="grid lg:grid-cols-[70fr_30fr] gap-6">
+      <ViewContainer className="grid gap-6 lg:grid-cols-[70fr_30fr]">
         <div className="space-y-4">
           <div>
             <picture>
@@ -43,12 +43,16 @@ function Hero() {
             {heroLinks.map(({ title, description, href }, index) => (
               <Fragment key={title}>
                 <li>
-                  <Link href={href} className="text-xl font-bold text-white">
-                    {title}
-                  </Link>
+                  <h3>
+                    <Link href={href} className="text-xl font-bold text-white">
+                      {title}
+                    </Link>
+                  </h3>
                   <p className="text-gray-400">{description}</p>
                 </li>
-                {index < heroLinks.length - 1 && <Separator className="bg-gray-600" />}
+                {index < heroLinks.length - 1 && (
+                  <Separator className="bg-gray-600" />
+                )}
               </Fragment>
             ))}
           </ul>

@@ -1,16 +1,8 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { ViewContainer } from "@/components/layouts";
 import Link from "next/link";
-// import {
-//   Button,
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuTrigger,
-// } from "@/components/ui";
-import { Menu, Moon, Sun } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import { headerLinks } from "@/content";
 import {
@@ -28,8 +20,6 @@ import {
 } from "@/components/ui";
 
 function Header() {
-  const { setTheme } = useTheme();
-
   return (
     <header className="py-6">
       <ViewContainer className="flex items-center justify-between">
