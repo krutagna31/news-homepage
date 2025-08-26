@@ -1,6 +1,6 @@
 import { Link } from "@/types";
 
-export const sidebarLinks: Link[] = [
+export const heroLinks: Link[] = [
   {
     title: "Hydrogen VS Electric Cars",
     description: "Will hydrogen-fueled cars ever catch up to EVs?",

@@ -1,37 +1,54 @@
 import { SectionContainer, ViewContainer } from "@/components/layouts";
 import { Button } from "@/components/ui";
+import { heroLinks } from "@/content";
+import Link from "next/link";
 
 function Hero() {
   return (
     <SectionContainer>
-      <ViewContainer className="space-y-6">
-        <div>
-          <picture>
-            <source
-              media="(min-width:768px)"
-              srcSet="/images/hero/image-web-3-desktop.jpg"
-            />
-            <img
-              src="/images/hero/image-web-3-mobile.jpg"
-              alt="a picture showing few shapes"
-            />
-          </picture>
-        </div>
-        <div className="grid md:grid-cols-2">
-          <h1 className="text-4xl font-extrabold md:text-5xl">
-            The Bright Future of Web 3.0?
-          </h1>
-          <div className="space-y-2">
-            <p className="text-muted-foreground">
-              We dive into the next evolution of the web that claims to put the
-              power of the platforms back into the hands of the people. But is
-              it really fulfilling its promise?
-            </p>
-            <Button className="rounded-none tracking-widest" size="lg">
-              READ MORE
-            </Button>
+      <ViewContainer>
+        <div className="space-y-6">
+          <div>
+            <picture>
+              <source
+                media="(min-width:768px)"
+                srcSet="/images/hero/image-web-3-desktop.jpg"
+              />
+              <img
+                src="/images/hero/image-web-3-mobile.jpg"
+                alt="a picture showing few shapes"
+              />
+            </picture>
+          </div>
+          <div className="grid md:grid-cols-2">
+            <h1 className="text-4xl font-extrabold md:text-5xl">
+              The Bright Future of Web 3.0?
+            </h1>
+            <div className="space-y-2">
+              <p className="text-muted-foreground">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <Button className="rounded-none tracking-widest" size="lg">
+                READ MORE
+              </Button>
+            </div>
           </div>
         </div>
+        <aside className="space-y-4 bg-blue-950">
+          <h1 className="text-3xl font-extrabold text-amber-400">New</h1>
+          <ul className="space-y-4">
+            {heroLinks.map(({ title, description, href }) => (
+              <li key={title}>
+                <Link href={href} className="text-xl font-bold text-white">
+                  {title}
+                </Link>
+                <p className="text-gray-400">{description}</p>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </ViewContainer>
     </SectionContainer>
   );
