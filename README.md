@@ -4,9 +4,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ## Table of contents
 
-- [Overview](#overview)
-  <!-- - [Screenshot](#screenshot) -->
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Getting Started](#getting-started)
@@ -14,16 +11,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
   - [Installing Dependencies](#installing-dependencies)
   - [Running the Development Server](#running-the-development-server)
 - [Author](#author)
-
-## Overview
-
-<!-- ### Screenshot
-
-![](./screenshot.jpg) -->
-
-### Links
-
-- Live Site URL: [https://news-homepage-31.vercel.app/](https://news-homepage-31.vercel.app/)
 
 ## My process
 
@@ -60,4 +47,3 @@ npm install
 ## Author
 
 - Website - [Krutagna Patel](https://flowcv.me/krutagna-patel)
-
