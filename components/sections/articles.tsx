@@ -6,11 +6,11 @@ import Link from "next/link";
 function Articles() {
   return (
     <SectionContainer>
-      <ViewContainer className="grid grid-cols-3 gap-6">
+      <ViewContainer className="grid gap-4 md:grid-cols-3">
         {articles.map(({ image, link }, index) => (
-          <article key={index} className="flex items-center gap-4">
+          <article key={index} className="grid grid-cols-[30fr_70fr] items-center gap-4">
             <div>
-              <Image src={image.src} alt={image.alt} width="200" height="254" />
+              <Image className="w-full" src={image.src} alt={image.alt} width="200" height="254" />
             </div>
             <div className="space-y-2">
               <p className="text-4xl font-bold text-red-500">0{index + 1}</p>
