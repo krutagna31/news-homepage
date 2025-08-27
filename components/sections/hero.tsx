@@ -30,13 +30,16 @@ function Hero() {
                 the power of the platforms back into the hands of the people.
                 But is it really fulfilling its promise?
               </p>
-              <Button className="rounded-none tracking-widest" size="lg">
+              <Button
+                className="rounded-none bg-red-400 px-8 py-6 font-bold tracking-widest text-slate-900 hover:bg-slate-900 hover:text-white dark:text-slate-800 dark:hover:bg-slate-800 dark:hover:text-white"
+                size="lg"
+              >
                 READ MORE
               </Button>
             </div>
           </div>
         </div>
-        <aside className="space-y-6 bg-slate-900 p-6">
+        <aside className="space-y-6 bg-slate-900 p-6 dark:bg-slate-800">
           <h2 className="text-4xl font-extrabold text-amber-400">New</h2>
           <ul className="space-y-6">
             {heroLinks.map(({ title, description, href }, index) => (
