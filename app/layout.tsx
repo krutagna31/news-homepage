@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/context/theme-provider";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { Header } from "@/components/sections";
 import "./globals.css";
 
-const inter = localFont({
-  src: "../public/fonts/Inter-VariableFont_slnt,wght.ttf",
-  preload: false,
+const inter = Inter({
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: "News Homepage",
-  description: "This is the solution to news homepage challenge on frontend mentor",
+  description:
+    "This is the solution to news homepage challenge on frontend mentor",
 };
 
 export default function RootLayout({
