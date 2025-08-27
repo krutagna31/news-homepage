@@ -7,7 +7,7 @@ import { Fragment } from "react";
 function Hero() {
   return (
     <SectionContainer>
-      <ViewContainer className="grid gap-6 lg:grid-cols-[70fr_30fr]">
+      <ViewContainer className="grid gap-12 lg:grid-cols-[70fr_30fr]">
         <div className="space-y-4">
           <div>
             <picture>
@@ -25,7 +25,7 @@ function Hero() {
             <h1 className="text-4xl font-extrabold md:text-5xl">
               The Bright Future of Web 3.0?
             </h1>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <p className="text-muted-foreground">
                 We dive into the next evolution of the web that claims to put
                 the power of the platforms back into the hands of the people.
