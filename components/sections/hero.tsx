@@ -8,7 +8,7 @@ function Hero() {
   return (
     <SectionContainer>
       <ViewContainer className="grid gap-12 lg:grid-cols-[70fr_30fr]">
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div>
             <picture>
               <source
@@ -37,7 +37,7 @@ function Hero() {
             </div>
           </div>
         </div>
-        <aside className="space-y-4 bg-slate-900 p-4">
+        <aside className="space-y-6 bg-slate-900 p-6">
           <h2 className="text-4xl font-extrabold text-amber-400">New</h2>
           <ul className="space-y-6">
             {heroLinks.map(({ title, description, href }, index) => (

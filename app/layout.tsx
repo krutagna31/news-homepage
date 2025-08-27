@@ -6,6 +6,7 @@ import "./globals.css";
 
 const inter = localFont({
   src: "../public/fonts/Inter-VariableFont_slnt,wght.ttf",
+  preload: false,
 });
 
 export const metadata: Metadata = {

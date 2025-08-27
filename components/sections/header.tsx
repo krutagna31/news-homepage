@@ -32,13 +32,14 @@ function Header() {
       <ViewContainer className="flex items-center justify-between">
         <Link href="#">
           <ThemeImage
+            className="w-10"
             src={{
               light: "/images/header/logo-light.svg",
               dark: "/images/header/logo-dark.svg",
             }}
             alt="w"
-            width="32"
-            height="24"
+            width="65"
+            height="40"
           />
         </Link>
         <NavigationMenu className="hidden md:flex">
@@ -78,8 +79,8 @@ function Header() {
           </DropdownMenu>
 
           <Sheet>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="outline" size="icon">
+            <SheetTrigger asChild>
+              <Button className="md:hidden" variant="outline" size="icon">
                 <Menu />
               </Button>
             </SheetTrigger>
