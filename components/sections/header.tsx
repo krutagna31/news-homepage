@@ -4,7 +4,6 @@ import { useTheme } from "next-themes";
 import { ViewContainer } from "@/components/layouts";
 import Link from "next/link";
 import { Menu, Moon, Sun } from "lucide-react";
-import Image from "next/image";
 import { headerLinks } from "@/content";
 import {
   Button,
@@ -22,6 +21,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  ThemeImage,
 } from "@/components/ui";
 
 function Header() {
@@ -31,8 +31,11 @@ function Header() {
     <header className="pt-6">
       <ViewContainer className="flex items-center justify-between">
         <Link href="#">
-          <Image
-            src="/images/header/logo-light.svg"
+          <ThemeImage
+            src={{
+              light: "/images/header/logo-light.svg",
+              dark: "/images/header/logo-dark.svg",
+            }}
             alt="w"
             width="32"
             height="24"
@@ -43,7 +46,9 @@ function Header() {
             {headerLinks.map((headerLink) => (
               <NavigationMenuItem key={headerLink.title}>
                 <NavigationMenuLink asChild>
-                  <Link href={headerLink.href}>{headerLink.title}</Link>
+                  <Link className="hover:text-amber-400" href={headerLink.href}>
+                    {headerLink.title}
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
@@ -78,7 +83,7 @@ function Header() {
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent>
+            <SheetContent className="w-2/4">
               <SheetHeader>
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <SheetDescription className="sr-only">
@@ -86,12 +91,12 @@ function Header() {
                   site
                 </SheetDescription>
               </SheetHeader>
-              <NavigationMenu>
+              <NavigationMenu className="pl-4">
                 <NavigationMenuList className="flex-col items-start">
                   {headerLinks.map((headerLink) => (
                     <NavigationMenuItem key={headerLink.title}>
                       <NavigationMenuLink asChild>
-                        <Link href={headerLink.href}>{headerLink.title}</Link>
+                        <Link className="text-xl" href={headerLink.href}>{headerLink.title}</Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   ))}
