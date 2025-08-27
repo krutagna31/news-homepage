@@ -1,7 +1,6 @@
 import { SectionContainer, ViewContainer } from "@/components/layouts";
-import { Button, Separator } from "@/components/ui";
+import { Button, CustomLink, Separator } from "@/components/ui";
 import { heroLinks } from "@/content";
-import Link from "next/link";
 import { Fragment } from "react";
 
 function Hero() {
@@ -44,9 +43,12 @@ function Hero() {
               <Fragment key={title}>
                 <li>
                   <h3>
-                    <Link href={href} className="text-xl font-bold text-white">
+                    <CustomLink
+                      href={href}
+                      className="text-xl font-bold text-white"
+                    >
                       {title}
-                    </Link>
+                    </CustomLink>
                   </h3>
                   <p className="text-gray-400">{description}</p>
                 </li>
