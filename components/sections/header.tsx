@@ -47,9 +47,7 @@ function Header() {
             {headerLinks.map((headerLink) => (
               <NavigationMenuItem key={headerLink.title}>
                 <NavigationMenuLink asChild>
-                  <Link className="hover:text-amber-400" href={headerLink.href}>
-                    {headerLink.title}
-                  </Link>
+                  <Link href={headerLink.href}>{headerLink.title}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
@@ -97,7 +95,9 @@ function Header() {
                   {headerLinks.map((headerLink) => (
                     <NavigationMenuItem key={headerLink.title}>
                       <NavigationMenuLink asChild>
-                        <Link className="text-xl" href={headerLink.href}>{headerLink.title}</Link>
+                        <Link className="text-xl" href={headerLink.href}>
+                          {headerLink.title}
+                        </Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   ))}
