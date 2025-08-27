@@ -47,3 +47,4 @@ npm install
 ## Author
 
 - Website - [Krutagna Patel](https://flowcv.me/krutagna-patel)
+- Frontend Mentor - [@krutagna31](https://www.frontendmentor.io/profile/krutagna31)
