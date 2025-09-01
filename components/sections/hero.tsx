@@ -43,22 +43,20 @@ function Hero() {
           <h2 className="text-4xl font-extrabold text-amber-400">New</h2>
           <ul className="space-y-6">
             {heroLinks.map(({ title, description, href }, index) => (
-              <Fragment key={title}>
-                <li>
-                  <h3>
-                    <CustomLink
-                      href={href}
-                      className="text-xl font-bold text-white"
-                    >
-                      {title}
-                    </CustomLink>
-                  </h3>
-                  <p className="text-gray-400">{description}</p>
-                </li>
+              <li key={title}>
+                <h3>
+                  <CustomLink
+                    href={href}
+                    className="text-xl font-bold text-white"
+                  >
+                    {title}
+                  </CustomLink>
+                </h3>
+                <p className="text-gray-400">{description}</p>
                 {index < heroLinks.length - 1 && (
-                  <Separator className="bg-gray-600" />
+                  <Separator className="bg-gray-600 mt-4" />
                 )}
-              </Fragment>
+              </li>
             ))}
           </ul>
         </aside>
