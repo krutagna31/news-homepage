@@ -6,8 +6,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 - [Overview](#overview)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
 - [Getting Started](#getting-started)
   - [Cloning the repository](#cloning-the-repository)
   - [Installing Dependencies](#installing-dependencies)
@@ -19,15 +17,6 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/news-homepage-z6b9rhXLIi](https://www.frontendmentor.io/solutions/news-homepage-z6b9rhXLIi)
-
-## My process
-
-### Built with
-
-- [Next.js](https://nextjs.org/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Shadcn/UI](https://ui.shadcn.com/)
 
 ## Getting Started
 
